@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mpuse's News Portal - News Article</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 35px;
+      padding: 40px 0 60px;
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      font-size: 0.83rem;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: var(--dark-red);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .breadcrumb span { margin: 0 7px; }
+
+    /* ARTICLE HEADER */
+    .article-header {
+      margin-bottom: 25px;
+    }
+
+    .article-header h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .article-byline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      padding: 12px 0;
+      margin-bottom: 20px;
+    }
+
+    .article-byline .author {
+      color: var(--dark-red);
+      font-weight: 700;
+    }
+
+    /* ARTICLE IMAGE */
+    .article-img-wrap {
+      margin-bottom: 20px;
+    }
+
+    .article-img-wrap img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .img-caption {
+      font-size: 0.82rem;
+      color: #999;
+      font-style: italic;
+      margin-top: 8px;
+      padding-left: 5px;
+    }
+
+    /* ARTICLE BODY */
+    .article-body p {
+      font-size: 1rem;
+      color: var(--text-dark);
+      margin-bottom: 18px;
+      line-height: 1.85;
+    }
+
+    .article-body h2 {
+      font-size: 1.3rem;
+      margin: 30px 0 14px;
+      color: var(--charcoal);
+    }
+
+    /* PULL QUOTE */
+    .pull-quote {
+      background-color: var(--light-gray);
+      padding: 20px 25px;
+      margin: 25px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'Merriweather', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--charcoal);
+      margin-bottom: 8px !important;
+    }
+
+    .pull-quote cite {
+      font-size: 0.82rem;
+      color: var(--dark-red);
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* ARTICLE TAGS */
+    .article-tags {
+      margin-top: 30px;
+      padding-top: 15px;
+    }
+
+    .article-tags span {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-right: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--text-mid);
+      font-size: 0.78rem;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin: 3px;
+    }
+
+    /* RELATED ARTICLES */
+    .related-section {
+      margin-top: 40px;
+      padding-top: 25px;
+    }
+
+    .related-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .related-card {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;;
+    }
+
+    .related-card img {
+      width: 90px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .related-card h4 {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .related-card h4 a {
+      color: var(--charcoal);
+      text-decoration: none;
+    }
+
+    .related-card h4 a:hover { color: var(--dark-red); }
+
+    .related-card span { font-size: 0.76rem; color: #999; }
+
+    /* IMAGE GALLERY in article */
+    .article-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .article-gallery img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 750px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-header h1 { font-size: 1.5rem; }
+      .article-img-wrap img { height: 220px; }
+      .article-gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>Sunday, 22 March 2026 &nbsp;|&nbsp; Maseru, Lesotho</span>
+      <span>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.bbc.com/news/world/africa" target="_blank">BBC Africa</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <a href="index.html" class="logo">MPUSE'S<span> NEWS PORTAL</span></a>
+      <span class="header-tagline">Bringing you the news that matters — local &amp; international</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">News Categories</a></li>
+        <li><a href="article.html" class="active">News Article</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- MAIN ARTICLE -->
+      <main>
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <a href="categories.html">Politics</a>
+          <span>›</span>
+          Southern Africa Faces New Economic Challenges
+        </div>
+
+        <!-- ARTICLE HEADER -->
+        <div class="article-header">
+          <span class="badge">Politics</span>
+          <h1>Southern Africa Faces New Economic Challenges as Global Markets Shift</h1>
+          <div class="article-byline">
+            <span>By <span class="author">Staff Reporter</span></span>
+            <span>📅 March 22, 2026</span>
+            <span>⏱ 5 min read</span>
+            <span>📍 Maseru, Lesotho</span>
+          </div>
+        </div>
+
+        <!-- MAIN IMAGE -->
+        <div class="article-img-wrap">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=80" alt="Economic Forum in Maseru" />
+          <p class="img-caption">Regional economists gathered in Maseru to address the impact of global economic shifts on Southern African nations. Photo: Mpuse's News Portal</p>
+        </div>
+
+        <!-- ARTICLE BODY -->
+        <div class="article-body">
+          <p>Regional economists and policy makers gathered in Maseru this week for a two-day summit focused on the growing impact of global market changes on the economies of Southern Africa. The conference, organized jointly by the governments of Lesotho, South Africa, and Zimbabwe, brought together over 120 delegates from across the continent.</p>
+
+          <p>The summit comes at a critical time. Rising inflation, shifting trade routes, and the increasing cost of imported goods have placed significant pressure on smaller economies in the region. Lesotho, like many of its neighbors, remains heavily dependent on imports and remittances from citizens working abroad.</p>
+
+          <div class="pull-quote">
+            <p>"We cannot afford to wait for global markets to stabilize before acting. The time for unified regional policy is now."</p>
+            <cite>— Dr. Lineo Mofokeng, Economist, National University of Lesotho</cite>
+          </div>
+
+          <h2>Key Issues Discussed</h2>
+          <p>Delegates identified three main areas of concern. First, the cost of food imports has increased by an estimated 18% over the past year, placing strain on low-income households. Second, the textile and manufacturing sectors — which employ thousands of workers in Lesotho — face competition from cheaper alternatives emerging in Asian markets. Third, access to affordable financing for small and medium-sized enterprises remains a persistent barrier to economic growth.</p>
+
+          <p>South Africa's Deputy Minister of Trade and Industry called on member states of the Southern African Development Community (SADC) to fast-track a new regional investment framework that would allow businesses to operate across borders with reduced bureaucracy and tariffs.</p>
+
+          <!-- IMAGE GALLERY within article -->
+          <h2>Gallery: Summit in Pictures</h2>
+          <div class="article-gallery">
+            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=300&q=80" alt="Summit Gallery 1" />
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&q=80" alt="Summit Gallery 2" />
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&q=80" alt="Summit Gallery 3" />
+          </div>
+
+          <h2>What Happens Next</h2>
+          <p>Following the summit, participating governments have committed to producing a joint policy brief within 60 days. The document will include recommendations on trade facilitation, agricultural self-sufficiency, and digital economic development.</p>
+
+          <p>Civil society organizations present at the summit welcomed the commitments but warned that implementation must be closely monitored. "We have seen many good plans on paper before. What matters is follow-through," said one representative from a regional business association.</p>
+
+          <p>The next summit is scheduled for June 2026 in Harare, Zimbabwe, where the policy brief will be formally presented to heads of state.</p>
+
+          <!-- ARTICLE TAGS -->
+          <div class="article-tags">
+            <span>Tags:</span>
+            <a href="categories.html" class="tag">Politics</a>
+            <a href="categories.html" class="tag">Economy</a>
+            <a href="categories.html" class="tag">Southern Africa</a>
+            <a href="categories.html" class="tag">SADC</a>
+            <a href="categories.html" class="tag">Lesotho</a>
+          </div>
+        </div>
+
+        <!-- RELATED ARTICLES -->
+        <div class="related-section">
+          <h2>Related Stories</h2>
+
+          <div class="related-card">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200&q=80" alt="Related 1" />
+            <div>
+              <h4><a href="#">Parliament Debates New Land Reform Bill</a></h4>
+              <span>Politics &nbsp;|&nbsp; March 20, 2026</span>
+            </div>
+          </div>
+
+          <div class="related-card">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&q=80" alt="Related 2" />
+            <div>
+              <h4><a href="#">New Trade Agreement to Boost Lesotho Exports</a></h4>
+              <span>Business &nbsp;|&nbsp; March 22, 2026</span>
+            </div>
+          </div>
+
+          <div class="related-card">
+            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=200&q=80" alt="Related 3" />
+            <div>
+              <h4><a href="#">Lesotho Hosts Regional Peace and Security Summit</a></h4>
+              <span>Politics &nbsp;|&nbsp; March 21, 2026</span>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <div class="sidebar-widget">
+          <h3>More in Politics</h3>
+          <ul class="sidebar-list">
+            <li><a href="#">Land Reform Bill — Second Reading</a></li>
+            <li><a href="#">SADC Leaders Meet in Maseru</a></li>
+            <li><a href="#">Public Sector Reform Plan Released</a></li>
+            <li><a href="#">Opposition Party Responds to Budget</a></li>
+            <li><a href="#">New District Governor Appointed</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Trending Now</h3>
+          <ul class="sidebar-list">
+            <li><a href="#">Flood Warning for Southern Districts</a></li>
+            <li><a href="#">Football Team Qualifies for Regional Cup</a></li>
+            <li><a href="#">Local Artist Wins International Award</a></li>
+            <li><a href="#">Power Cuts: Energy Authority Responds</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>External Sources</h3>
+          <ul class="sidebar-list">
+            <li><a href="https://www.bbc.com/news/world/africa" target="_blank">BBC Africa</a></li>
+            <li><a href="https://www.aljazeera.com" target="_blank">Al Jazeera</a></li>
+            <li><a href="https://www.reuters.com" target="_blank">Reuters</a></li>
+            <li><a href="https://www.un.org/en/news" target="_blank">UN News</a></li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Mpuse's News Portal</h4>
+          <p>Delivering accurate, timely, and relevant news to readers in Lesotho and beyond.</p>
+          <br />
+          <p>📧 mpuse@gmail.com</p>
+          <p>📞 +266 5707 0515</p>
+          <p>📍 Maseru, Lesotho</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">News Categories</a></li>
+            <li><a href="article.html">News Article</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>External Sources</h4>
+          <ul>
+            <li><a href="https://www.bbc.com/news/world/africa" target="_blank">BBC Africa</a></li>
+            <li><a href="https://www.aljazeera.com" target="_blank">Al Jazeera</a></li>
+            <li><a href="https://www.reuters.com" target="_blank">Reuters</a></li>
+            <li><a href="https://www.un.org" target="_blank">United Nations</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mpuse's News Portal. All rights reserved</div>
+    </div>
+  </footer>
+
+</body>
+</html>

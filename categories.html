@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mpuse's News Portal - News Categories</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    /* CATEGORY TABS (Navigation bar with categories) */
+    .cat-tabs {
+      background-color: var(--white);
+      border-radius: 4px;
+      padding: 15px 20px;
+      margin-bottom: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .cat-tab {
+      display: inline-block;
+      padding: 7px 18px;
+      border-radius: 3px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--dark-red);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cat-tab:hover,
+    .cat-tab.active {
+      background-color: var(--dark-red);
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    /* CATEGORY SECTION BLOCK */
+    .cat-block {
+      margin-bottom: 50px;
+    }
+
+    .cat-block-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+    }
+
+    .cat-block-header h2 {
+      font-size: 1.2rem;
+    }
+
+    .cat-block-header a {
+      font-size: 0.82rem;
+      color: var(--dark-red);
+    }
+
+    /* HORIZONTAL NEWS CARD */
+    .h-card {
+      background-color: var(--white);
+      border-radius: 4px;
+      display: flex;
+      gap: 15px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .h-card img {
+      width: 130px;
+      height: 100px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .h-card-body {
+      padding: 12px 12px 12px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .h-card-body h3 {
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+    }
+
+    .h-card-body h3 a {
+      color: var(--charcoal);
+      text-decoration: none;
+    }
+
+    .h-card-body h3 a:hover { color: var(--dark-red); }
+
+    .h-card-body p {
+      font-size: 0.83rem;
+      color: var(--text-mid);
+      margin-bottom: 5px;
+    }
+
+    .h-card-body .news-meta {
+      font-size: 0.76rem;
+      color: #999;
+      border-top: none;
+      padding-top: 0;
+    }
+
+    /* LAYOUT */
+    .cats-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      padding: 40px 0;
+    }
+
+    @media (max-width: 750px) {
+      .cats-layout { grid-template-columns: 1fr; }
+      .h-card img { width: 90px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>Sunday, 22 March 2026 &nbsp;|&nbsp; Maseru, Lesotho</span>
+      <span>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.bbc.com/news/world/africa" target="_blank">BBC Africa</a>
+        <a href="https://www.aljazeera.com" target="_blank">Al Jazeera</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <a href="index.html" class="logo">MPUSE'S<span> NEWS PORTAL</span></a>
+      <span class="header-tagline">Bringing you the news that matters — local &amp; international</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html" class="active">News Categories</a></li>
+        <li><a href="article.html">News Article</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="container">
+      <h1>News Categories</h1>
+      <p>Browse news by topic — find the stories that matter to you</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- NAVIGATION BAR WITH CATEGORIES -->
+    <div class="cat-tabs">
+      <a href="#politics" class="cat-tab active">Politics</a>
+      <a href="#business" class="cat-tab">Business</a>
+      <a href="#health" class="cat-tab">Health</a>
+      <a href="#education" class="cat-tab">Education</a>
+      <a href="#sports" class="cat-tab">Sports</a>
+      <a href="#technology" class="cat-tab">Technology</a>
+      <a href="#environment" class="cat-tab">Environment</a>
+      <a href="#culture" class="cat-tab">Culture</a>
+    </div>
+
+    <div class="cats-layout">
+      <main>
+
+        <!-- POLITICS -->
+        <div class="cat-block" id="politics">
+          <div class="cat-block-header">
+            <h2>🏛️ Politics</h2>
+            <a href="article.html">See all politics stories →</a>
+          </div>
+
+          <div class="h-card">
+            <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=300&q=80" alt="Parliament" />
+            <div class="h-card-body">
+              <span class="badge">Politics</span>
+              <h3><a href="article.html">Parliament Debates New Land Reform Bill</a></h3>
+              <p>Lawmakers discuss sweeping changes to land ownership and usage policies across the country.</p>
+              <div class="news-meta">March 22, 2026 &nbsp;|&nbsp; Staff Reporter</div>
+            </div>
+          </div>
+
+ 
+        </div>
+
+        <hr class="divider" />
+
+        <!-- BUSINESS -->
+        <div class="cat-block" id="business">
+          <div class="cat-block-header">
+            <h2>💼 Business</h2>
+            <a href="article.html">See all business stories →</a>
+          </div>
+
+          <div class="h-card">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&q=80" alt="Trade" />
+            <div class="h-card-body">
+              <span class="badge">Business</span>
+              <h3><a href="article.html">New Trade Agreement to Boost Lesotho Exports</a></h3>
+              <p>A landmark deal opens new markets for textile and agricultural goods from the Kingdom.</p>
+              <div class="news-meta">March 22, 2026 &nbsp;|&nbsp; Business Desk</div>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="divider" />
+
+        <!-- HEALTH -->
+        <div class="cat-block" id="health">
+          <div class="cat-block-header">
+            <h2>🏥 Health</h2>
+            <a href="article.html">See all health stories →</a>
+          </div>
+
+          <div class="h-card">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=300&q=80" alt="Clinic" />
+            <div class="h-card-body">
+              <span class="badge">Health</span>
+              <h3><a href="article.html">New Health Clinics Opened in Rural Districts</a></h3>
+              <p>Four new clinics provide basic healthcare to communities previously with limited access.</p>
+              <div class="news-meta">March 22, 2026 &nbsp;|&nbsp; Health Desk</div>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="divider" />
+
+        <!-- SPORTS -->
+        <div class="cat-block" id="sports">
+          <div class="cat-block-header">
+            <h2>⚽ Sports</h2>
+            <a href="article.html">See all sports stories →</a>
+          </div>
+
+          <div class="h-card">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=300&q=80" alt="Football" />
+            <div class="h-card-body">
+              <span class="badge">Sports</span>
+              <h3><a href="article.html">Lesotho Football Team Qualifies for Regional Cup</a></h3>
+              <p>The national squad secures their place in the COSAFA Cup after a strong qualifying campaign.</p>
+              <div class="news-meta">March 19, 2026 &nbsp;|&nbsp; Sports Desk</div>
+            </div>
+          </div>
+
+          
+        </div>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <div class="sidebar-widget">
+          <h3>All Categories</h3>
+          <ul class="sidebar-list">
+            <li><a href="#politics">🏛️ Politics</a></li>
+            <li><a href="#business">💼 Business</a></li>
+            <li><a href="#health">🏥 Health</a></li>
+            <li><a href="#education">🎓 Education</a></li>
+            <li><a href="#sports">⚽ Sports</a></li>
+            <li><a href="#technology">💻 Technology</a></li>
+            <li><a href="#environment">🌿 Environment</a></li>
+            <li><a href="#culture">🎭 Culture</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Most Read Today</h3>
+          <ul class="sidebar-list">
+            <li><a href="article.html">Lesotho Hosts Regional Peace Conference</a></li>
+            <li><a href="article.html">Flood Warning for Southern Districts</a></li>
+            <li><a href="article.html">New Football Coach Announced</a></li>
+            <li><a href="article.html">Power Cuts: Energy Authority Responds</a></li>
+            <li><a href="article.html">Local Artist Wins International Award</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>External News Sources</h3>
+          <ul class="sidebar-list">
+            <li><a href="https://www.bbc.com/news/world/africa" target="_blank">BBC Africa</a></li>
+            <li><a href="https://www.aljazeera.com" target="_blank">Al Jazeera</a></li>
+            <li><a href="https://www.reuters.com" target="_blank">Reuters</a></li>
+            <li><a href="https://www.un.org/en/news" target="_blank">UN News</a></li>
+            <li><a href="https://www.theguardian.com/world/africa" target="_blank">The Guardian Africa</a></li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Mpuse's News Portal</h4>
+          <p>Delivering accurate, timely, and relevant news to readers in Lesotho and beyond.</p>
+          <br />
+          <p>📧 mpuse@gmail.com</p>
+          <p>📞 +266 5707 0515</p>
+          <p>📍 Maseru, Lesotho</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">News Categories</a></li>
+            <li><a href="article.html">News Article</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mpuse's News Portal. All rights reserved</div>
+    </div>
+  </footer>
+
+</body>
+</html>
